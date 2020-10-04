@@ -23,6 +23,10 @@ Start the container:
 
 See `testing_transapp.ipynb` for an example of using [requests](https://requests.readthedocs.io/en/master/user/quickstart/) to interact with the flask app.
 
+You can also use curl to send text to the app:
+
+`curl -X POST http://127.0.0.1:5000/predict -d '{"text":"cats is bad, unrivaled in film history"}'`
+
 Get the container ID
 
 `docker ps`

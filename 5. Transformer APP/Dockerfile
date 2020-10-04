@@ -1,7 +1,6 @@
-FROM python:3.6-slim-buster
+FROM huggingface/transformers-pytorch-cpu
 COPY . /app
 WORKDIR /app
-RUN pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 RUN pip3 install -r requirements.txt
-RUN python preload.py
+RUN python3 preload.py
 CMD ["python3","app.py"]
